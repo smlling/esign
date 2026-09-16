@@ -2,20 +2,18 @@
 //  ContentView.swift
 //  esign
 //
-//  Created by smlling on 9/16/26.
-//
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView {
+            SigningView()
+                .tabItem { Label("签名", systemImage: "signature") }
+            InstallView()
+                .tabItem { Label("安装", systemImage: "square.and.arrow.down") }
         }
-        .padding()
+        .frame(minWidth: 680, minHeight: 720)
     }
 }
 

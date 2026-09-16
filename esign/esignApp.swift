@@ -13,5 +13,7 @@ struct esignApp: App {
         WindowGroup {
             ContentView()
         }
+        .defaultSize(width: 720, height: 780)
+        .windowResizability(.contentMinSize)
     }
 }
